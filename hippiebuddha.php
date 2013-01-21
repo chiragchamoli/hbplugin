@@ -76,7 +76,7 @@ Class HB_Post{
     public function register_all_taxonomies($taxonomies){
             foreach($taxonomies as $name => $arr)
             {
-                register_taxonomy($name, array('hb_post'), $arr);
+                register_taxonomy($name, array('hb'), $arr);
             }
 
             
@@ -86,7 +86,7 @@ Class HB_Post{
     {
         
         add_action('add_meta_boxes', function(){
-            add_meta_box('hb_source_url', 'Source for this HB', 'hb_source_post', 'hb_post');
+            add_meta_box('hb_source_url', 'Source for this HB', 'hb_source_post', 'hb');
 
         });
 
