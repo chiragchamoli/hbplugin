@@ -39,7 +39,7 @@ Class HB_Post{
                 'not_found_in_trash' => 'No HB Post in Trash'
                 ),
             'query_var' => 'hb',
-//            'rewrite' => array('slug' => 'hb/'),
+            'rewrite' => array('slug' => 'hb/'),
             'public' => true,
             'menu_position' => 2,
             'menu_icon' => plugin_dir_url(__FILE__).'/hbicon.png',
