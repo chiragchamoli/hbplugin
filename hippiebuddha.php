@@ -48,7 +48,7 @@ Class HB_Post{
             )
         );
 
-        register_post_type('hb_post',$args);
+        register_post_type('hb',$args);
     }
 
     public function taxonomies(){
