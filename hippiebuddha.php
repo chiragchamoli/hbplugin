@@ -49,6 +49,8 @@ Class HB_Post{
         );
 
         register_post_type('hb',$args);
+        register_taxonomy_for_object_type('category', 'hb');
+        register_taxonomy_for_object_type('post_tag', 'hb');
     }
 
     public function taxonomies(){
