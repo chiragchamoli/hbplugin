@@ -109,7 +109,7 @@ Class HB_Post{
         add_action('save_post', function($id){
                 if(isset($_POST['hb_source_url']))
                 {
-                    $source = $_POST['hb_source_url']);
+                    $source = $_POST['hb_source_url'];
                     $source = strip_tags(str_replace(' ', '', $source));
                     update_post_meta($id,'hb_source_url',$source );    
                 }
