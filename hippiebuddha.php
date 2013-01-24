@@ -99,7 +99,7 @@ Class HB_Post{
             ?>
             <p> 
                 <label for="hb_source_url"> Source for the Article: Leave empty for Videos </label>
-                <input type="text" class="widefat" name="hb_source_url" id="hb_source_url" value="<?php echo  $source; ?> " />
+                <input type="text" class="widefat" name="hb_source_url" id="hb_source_url" value="<?php echo $source; ?> " />
 
                 
             </p>
@@ -109,7 +109,9 @@ Class HB_Post{
         add_action('save_post', function($id){
                 if(isset($_POST['hb_source_url']))
                 {
-                    update_post_meta($id,'hb_source_url', strip_tags($_POST['hb_source_url']));    
+                    $source = $_POST['hb_source_url']);
+                    $source = strip_tags(str_replace(' ', '', $source));
+                    update_post_meta($id,'hb_source_url',$source );    
                 }
 
         });
